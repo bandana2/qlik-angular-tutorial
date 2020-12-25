@@ -11,9 +11,17 @@ component('searchBar',{
            
             console.log(`self.query:${self.query}`)
             // console.log(`qlik output" ${JSON.stringify(QlikService.embedObject('QV01', 'jRSzYp'))}`);
-           QlikService.embedObject('QV01',self.query).then(QV1 => {
-            self.QV1 = QV1})  
-            self.QV0=QlikService.embedObject('QV00','CurrentSelections')
+           if (['data availablity','red category'].includes(self.query)){
+            
+            QlikService.embedObject(QlikService.getAppName('DOMM'),'QV00','CurrentSelections')
+            QlikService.embedObject(QlikService.getAppName('DOMM'),'QV01',QlikService.getChartName('DOMM',self.query))
+           } else if(['chart1','chart2'].includes(self.query)){
+            QlikService.embedObject(QlikService.getAppName('Analysis'),'QV00','CurrentSelections')
+            QlikService.embedObject(QlikService.getAppName('Analysis'),'QV01',QlikService.getChartName('Analysis',self.query))
+           }
+          
+           
+
     
         }
     }   

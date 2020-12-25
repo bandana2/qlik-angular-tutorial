@@ -42,7 +42,7 @@ initialize();
         
     // Load JSON files
     var promises = [
-        promiseJSON('app/qlikApps/DOMM/qlikAppConfig.json')
+        promiseJSON('app/qlikApps/qlikAppConfig.json')
     ];
     
     // Wait until all JSON files are loaded
@@ -50,7 +50,7 @@ initialize();
         
         // Extract JSON's
         console.log('Loaded all JSON files!', result);
-        var qlikAppConfig = result[0];
+        var qlikAppConfig = result;
         console.log(`result: ${JSON.stringify(result[0])}`)
         // Wait until all dynamic dependencies are loaded
         require(qlikAppConfig.dependencies, function() {

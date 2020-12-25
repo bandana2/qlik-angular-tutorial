@@ -1,5 +1,6 @@
 {"app":[
-    {"domm": "DO_MM_Wave1_V2.qvf",
+    {"name":"DOMM",
+    "appName": "DO_MM_Wave1_V2.qvf",
     "dependencies": [],
     "views": [
         {
@@ -52,11 +53,14 @@
         ]
     },
     "qvobjects":[
-        {"chartA":"nJdYjW"},{"chartB":"jphmxj"}
+        {"chartName":"data availablity", "chartValue":"nJdYjW"},
+        {"chartName":"red category", "chartValue":"jphmxj"}
+
     ]
     
 },
-{"analysis": "Analysis.qvf",
+{"name":"Analysis",
+    "appName": "Analysis.qvf",
     "dependencies": [],
     "views": [
         {
@@ -109,7 +113,9 @@
         ]
     },
     "qvobjects":[
-        {"chart1":"eqkKcjp"},{"chart2":"mfKRu"}
+        {"chartName":"chart1", "chartValue":"mfKRu"},
+        {"chartName":"chart2", "chartValue":"eqkKcjp"}
+   
     ]
     
 }

@@ -33,7 +33,12 @@
          *     A list of callbacks that will be called whenever the Qlik data model changes, e.g.
          *     a selection occurs.
          */
+        // .filter((element, index, array)=>element.name===selectedAppName)[0]
 
+        
+    //    console.log('filtered value: ')
+    //    console.log(`appvalue: ${selectedAppName}`)
+        // console.log(QlikAppConfig[0].app)
         // Variables
         var self = this;
         self.qlik = qlik;
@@ -57,7 +62,8 @@
         self.setDimension = setDimension;
         self.createListBox = createListBox;
         self.download = download;
-        
+        self.getAppName=getAppName;
+        self.getChartName=getChartName;
         // Do initialization
         self._initialize();
         
@@ -119,7 +125,7 @@
             if (index != -1) { self.listenerRegistry.splice(index, 1) };
         }
         
-        function embedObject(elementID, objectID) {
+        function embedObject(appName,elementID, objectID) {
             /**
              * Embeds a Qlik visualization object into a DOM element.
              *
@@ -130,6 +136,7 @@
              * Returns:
              *     A promise of a QV object.
              */
+            self.app = qlik.openApp(appName);
             return self.app.getObject(elementID, objectID);
         }
         
@@ -379,6 +386,17 @@
             });
         }
         
+        function getAppName(selectedAppName){
+            // console.log(selectedAppName)
+            
+            return QlikAppConfig[0].app.filter((element, index, array)=>element.name===selectedAppName)[0].appName
+        }
+
+        function getChartName(selectedAppName,selectedChartName){
+            // console.log(selectedAppName)
+            // self.app = qlik.openApp(QlikAppConfig[0].app.filter((element, index, array)=>element.name===selectedAppName)[0].appName, config);
+            return QlikAppConfig[0].app.filter((element)=>element.name===selectedAppName)[0].qvobjects.filter(element=>element.chartName===selectedChartName)[0].chartValue
+        }
         // Log
         console.log('Constructed paQlikService!', UtilityService.cw(), self);
     }
