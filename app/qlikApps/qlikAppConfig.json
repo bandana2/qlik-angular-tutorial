@@ -53,8 +53,11 @@
         ]
     },
     "qvobjects":[
-        {"chartName":"data availablity", "chartValue":"nJdYjW"},
-        {"chartName":"red category", "chartValue":"jphmxj"}
+        {"chartName":"data availablity", "chartValue":"jphmxj"},
+        {"chartName":"red category", "chartValue":"nJdYjW"},
+        {"chartName":"red distributon", "chartValue":"quDEVHX"},
+        {"chartName":"split by phase", "chartValue":"ZbfraQ"},
+        {"chartName":"split by du", "chartValue":"jRSzYp"}
 
     ]
     

@@ -1,24 +1,18 @@
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2">
-        <!--Sidebar content-->
-  
-        <p>
-          Search:
-          <input ng-model="$ctrl.query" />
-          <button  ng-click="$ctrl.getQlikObj()">Search</button>
-        </p>
-  
-        <p>
-        </p>
-  
-      </div>
-      <div class="col-md-10" >
-        <!--Body content-->
-        
-        <p id="QV00"></p>
-       <p id="QV01"></p>
-      </div>
-    </div>
-  </div>
-  
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="$ctrl.query">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="$ctrl.getQlikObj()">Search</button>
+  </form>
+</nav>
+
+
+<div class="card h-180">
+ 
+    <p  id="QV00"></p>
+    <p  class="qvobject" id="QV01" ></p>
+ 
+</div>
+
+
+
+
