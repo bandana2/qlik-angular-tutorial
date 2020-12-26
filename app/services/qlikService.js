@@ -64,6 +64,8 @@
         self.download = download;
         self.getAppName=getAppName;
         self.getChartName=getChartName;
+        self.toggledObject=toggledObject;
+        self.downloadData=downloadData;
         // Do initialization
         self._initialize();
         
@@ -138,6 +140,66 @@
              */
             self.app = qlik.openApp(appName);
             return self.app.getObject(elementID, objectID);
+        }
+
+
+        function toggledObject(appName,elementID, objectID) {
+            console.log('clicked toggle')
+            /**
+             * Embeds a Qlik visualization object into a DOM element.
+             *
+             * Args:
+             *     elementID:  A DOM element ID.
+             *     objectID:  A Qlik Sense object ID.
+             *
+             * Returns:
+             *     A promise of a QV object.
+             */
+            self.app = qlik.openApp(appName);
+            // objectID.toggleDataView().then(function () {
+			// 	// objectID.isToggled = toggled;
+			// 	this.getElementById(elementID).parentElement.focus();
+			// });
+            self.app.visualization.get(objectID).then(function(vis){
+                vis.show(elementID);
+                vis.toggleDataView().then(function(){
+                 
+                    this.getElementById(elementID)[0].focus();
+                  
+                })
+              });
+
+           
+        }
+
+        function downloadData(appName,elementID, objectID) {
+            console.log('clicked download')
+            /**
+             * Embeds a Qlik visualization object into a DOM element.
+             *
+             * Args:
+             *     elementID:  A DOM element ID.
+             *     objectID:  A Qlik Sense object ID.
+             *
+             * Returns:
+             *     A promise of a QV object.
+             */
+            self.app = qlik.openApp(appName);
+            // objectID.toggleDataView().then(function () {
+			// 	// objectID.isToggled = toggled;
+			// 	this.getElementById(elementID).parentElement.focus();
+            // });
+            
+
+            self.app.visualization.get(objectID).then(function(vis){
+                vis.exportData({format:'OOXML', state: 'A'}).then(function(link){
+                 
+                    window.open(link);
+                  
+                })
+              });
+
+           
         }
         
         function resize() {
