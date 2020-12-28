@@ -1,9 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline" >
-      <div class="form-group">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 800px;" ng-model="$ctrl.query"  ng-change="$ctrl.searchFor()"> 
    
-  </div>
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="$ctrl.getQlikObj()">Search</button>
   
     <div class="btn-group  btn-group-lg mx-4 " role="group" aria-label="Basic example" >
@@ -32,12 +30,11 @@
 
 <div class="card h-180">
     
-    <span class="border border-white">
-        <p  id="QV00"></p>
-        <!-- <h5 class="card-title">{{$ctrl.chartTitle}}</h5> -->
-        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-        <p  class="qvobject" id="QV01" ></p>
-      </span>
+  <span class="border border-white">
+    <p  id="QV00"></p>
+    <h5 class="card-title">{{$ctrl.chartTitle}}</h5>
+    <p  class="qvobject" id="QV01" ></p>
+  </span>
 </div>
 
 

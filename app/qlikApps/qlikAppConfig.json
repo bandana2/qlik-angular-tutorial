@@ -53,11 +53,22 @@
         ]
     },
     "qvobjects":[
-        {"chartName":"data availablity", "chartValue":"jphmxj"},
-        {"chartName":"red category", "chartValue":"nJdYjW"},
-        {"chartName":"red distributon", "chartValue":"quDEVHX"},
-        {"chartName":"split by phase", "chartValue":"ZbfraQ"},
-        {"chartName":"split by du", "chartValue":"jRSzYp"}
+        {"chartName":"data availability quarterly trend", "chartValue":"DGFsh"},
+        {"chartName":"data availability split by phase", "chartValue":"ZbfraQ"},
+        {"chartName":"data availability split by du", "chartValue":"jRSzYp"},
+        {"chartName":"data availability breakup", "chartValue":"jphmxj"},
+        {"chartName":"data availability data not available", "chartValue":"nJdYjW"},
+        {"chartName":"data availability delay in data", "chartValue":"quDEVHX"},
+        {"chartName":"data availability study details", "chartValue":"tyR"},
+        {"chartName":"global library catalog quarterly trend", "chartValue":"gYDBPpm"},
+        {"chartName":"global library catalog split by study status", "chartValue":"JRyXk"},
+        {"chartName":"global library catalog split by year", "chartValue":"EwzvJ"},
+        {"chartName":"global library catalog split by phase", "chartValue":"WgXeHHE"},
+        {"chartName":"global library catalog study details", "chartValue":"CRKqP"},
+        {"chartName":"overall summary global library catalog", "chartValue":"UGsKPy"},
+        {"chartName":"overall summary dbl to final stats", "chartValue":"kQdQPp"},
+        {"chartName":"overall summary dbl to planned outputs", "chartValue":"wRsUY"}
+        
 
     ]
     

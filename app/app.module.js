@@ -5,5 +5,8 @@ angular.module('myAngularapp', [
   'ngRoute',
   'searchBar',
   'carouselAncor',
-  'qlikApp'
-]);
+  'qlikApp',
+  'appFeatures',
+  'ui.select'
+])
+
